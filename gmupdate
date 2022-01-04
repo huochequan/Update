@@ -1,0 +1,56 @@
+// ==UserScript==
+// @name         front_page
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       Levi_sh666479
+// @include      https://www.amazon.*
+// @icon         https://www.google.com/s2/favicons?domain=amazon.com
+// @updateURL 
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    var tmdn_button = document.createElement("a");
+    tmdn_button.innerHTML = "TMDN";
+    document.getElementById("bylineInfo_feature_div").append(tmdn_button)
+	tmdn_button.onclick = function (){
+        var brand_name = document.getElementById("bylineInfo").textContent.replace(/Visit the/g, "").replace(/Store/g, "").replace(/Brand: /g,"").replace(/Marca: /g,"").replace(/Marke: /g,"").replace(/Marque : /g,"").replace(/Marca: /g, "");
+        var tmdn_url = "https://www.tmdn.org/tmview/welcome#/tmview/results?page=1&pageSize=30&criteria=C&basicSearch=";
+        var url = tmdn_url + brand_name
+        tmdn_button.setAttribute("href", url);
+        tmdn_button.setAttribute("target","_blank")
+		return;
+	};
+    var keepa_button = document.createElement("a");
+    keepa_button.innerHTML = "【Keepa】";
+    document.getElementById("bylineInfo_feature_div").append(keepa_button);
+    keepa_button.onclick = function (){
+        var brand_name = document.getElementById("bylineInfo").textContent.replace(/Visit the/g, "").replace(/Store/g, "").replace(/Brand: /g,"").replace(/Marca: /g,"").replace(/Marke: /g,"").replace(/Marque : /g,"").replace(/Marca: /g, "");
+        var keepa_url = 'https://keepa.com/#!finder/{"f":{"brand":{"filterType":"autocomplete","filter":"' + brand_name + '","type":"isOneOf"}},"s":[{"colId":"SALES_current","sort":"asc"}],"t":"g"}';
+        keepa_button.setAttribute("href", keepa_url);
+        keepa_button.setAttribute("target","_blank")
+		return;
+	};
+    var TYC_button = document.createElement("a");
+    TYC_button.innerHTML = "【TYC】";
+    document.getElementById("bylineInfo_feature_div").append(TYC_button);
+    TYC_button.onclick = function (){
+        var brand_name = document.getElementById("bylineInfo").textContent.replace(/Visit the/g, "").replace(/Store/g, "").replace(/Brand: /g,"").replace(/Marca: /g,"").replace(/Marke: /g,"").replace(/Marque : /g,"").replace(/Marca: /g, "");
+        var TYC_url = 'https://www.tianyancha.com/search?key='+brand_name;
+        TYC_button.setAttribute("href", TYC_url);
+        TYC_button.setAttribute("target","_blank")
+		return;
+	};
+    var QCC_button = document.createElement("a");
+    QCC_button.innerHTML = "【QCC】";
+    document.getElementById("bylineInfo_feature_div").append(QCC_button);
+    QCC_button.onclick = function (){
+        var brand_name = document.getElementById("bylineInfo").textContent.replace(/Visit the/g, "").replace(/Store/g, "").replace(/Brand: /g,"").replace(/Marca: /g,"").replace(/Marke: /g,"").replace(/Marque : /g,"").replace(/Marca: /g, "");
+        var QCC_url = 'https://www.qcc.com/web/search?key='+brand_name;
+        QCC_button.setAttribute("href", QCC_url);
+        QCC_button.setAttribute("target","_blank")
+		return;
+	};
+})();
