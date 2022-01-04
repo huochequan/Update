@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         front_page
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       Levi_sh666479
 // @include      https://www.amazon.*
