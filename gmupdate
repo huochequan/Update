@@ -6,7 +6,8 @@
 // @author       Levi_sh666479
 // @include      https://www.amazon.*
 // @icon         https://www.google.com/s2/favicons?domain=amazon.com
-// @updateURL 
+// @updateURL    https://raw.githubusercontent.com/huochequan/Update/main/gmupdate
+// @downloadURL  https://raw.githubusercontent.com/huochequan/Update/main/gmupdate
 // @grant        none
 // ==/UserScript==
 
